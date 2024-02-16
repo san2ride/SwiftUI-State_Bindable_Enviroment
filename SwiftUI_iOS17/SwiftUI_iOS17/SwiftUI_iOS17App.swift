@@ -13,6 +13,7 @@ struct SwiftUI_iOS17App: App {
         WindowGroup {
             StateView()
             //BindableView()
+                .environment(LightSwitch())
         }
     }
 }

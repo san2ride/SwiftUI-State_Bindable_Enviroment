@@ -9,13 +9,13 @@ import SwiftUI
 import SwiftData
 
 @Observable
-class LightSwitch {
+class Light{
     var isOn: Bool = false
 }
 struct Room: View {
     
     // child view can talk to parent view and change
-    @Bindable var light: LightSwitch
+    @Bindable var light: Light
     
     var body: some View {
         Toggle(isOn: $light.isOn) {
@@ -27,7 +27,7 @@ struct Room: View {
 
 struct BindableView: View {
     
-    @State private var light: LightSwitch = LightSwitch()
+    @State private var light: Light = Light()
     
     var body: some View {
         VStack {
